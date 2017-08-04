@@ -15,6 +15,31 @@ h1 {
     color: #999;
 }
 
+.container {
+    max-width: 900px;
+    margin: auto
+}
+
+
+/*
+ * HEADER
+ */
+
+.page-header a {
+    display: inline-block;
+}
+
+.page-header object {
+    pointer-events: none;
+    height: 80px;
+    padding: 10px;
+}
+
+
+/*
+ * ROTATOR
+ */
+
 .rotator {
     background-color: red;
     position: relative;
@@ -32,6 +57,7 @@ h1 {
     font-size: 40px;
     padding: 20px;
 }
+
 .rotator button:hover {
     background-color: rgba( 200, 200, 200, .5);
 }
