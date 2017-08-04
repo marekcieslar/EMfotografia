@@ -6,7 +6,68 @@ Author URI: http://emfotografia.eu
 Version: 1.0
 */
 
+body {
+    padding: 0;
+    margin: 0;
+}
 
 h1 {
     color: #999;
+}
+
+.rotator {
+    background-color: red;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 45%;
+    height: 0;
+}
+
+.rotator button {
+    z-index: 100;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    padding: 20px;
+}
+.rotator button:hover {
+    background-color: rgba( 200, 200, 200, .5);
+}
+
+.rotator button.left {
+    left: 30px;
+}
+
+.rotator button.right {
+    right: 30px;
+}
+
+.rotator .element {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background-position: 50%;
+    background-attachment: initial;
+    background-size: cover;
+    transition: all 0.7s;
+}
+
+.rotator .element.element-left {
+    left: -100%;
+    display: block;
+}
+
+.rotator .element.element-center {
+    display: block;
+    left: 0;
+}
+
+.rotator .element.element-right {
+    left: 100%;
+    display: block;
 }
