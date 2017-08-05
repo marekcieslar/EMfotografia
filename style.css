@@ -1,10 +1,10 @@
 /*
-Theme Name: EMFotografia
-Theme URI: http://emfotografia.eu
-Author: Ewelina Kroczek & Marek Cieślar
-Author URI: http://emfotografia.eu
-Version: 1.0
-*/
+ * Theme Name: EMFotografia
+ * Theme URI: http://emfotografia.eu
+ * Author: Ewelina Kroczek & Marek Cieślar
+ * Author URI: http://emfotografia.eu
+ * Version: 1.0
+ * */
 
 body {
     padding: 0;
@@ -29,13 +29,83 @@ h1 {
     display: inline-block;
 }
 
+.page-header {
+    position: relative;
+    z-index: 2;
+}
+
 .page-header object {
     pointer-events: none;
     height: 80px;
     padding: 10px;
 }
 
+.page-header.nav-opened {
+    background-color: #FFFFFF;
+    border-bottom: 3px solid #EEEEEE;
+}
 
+.page-header .menu {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: -1000px;
+    left: 0;
+    background-color: #FFFFFF;
+    opacity: 0.0;
+    transition: opacity 0.3s 0.0s, top 0.3s 0.3s;
+}
+
+.page-header .menu li {
+    border-bottom: 1px #AAAAAA solid;
+}
+
+.page-header .menu li:first-child {
+    padding-top: 35px;
+}
+
+.page-header .menu li:last-child {
+    border-bottom: 3px solid #AAAAAA;
+    padding-bottom: 35px;
+}
+
+.page-header .menu a {
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    padding: 15px;
+}
+
+.page-header.nav-opened .menu {
+    opacity: 1.0;
+    top: 88px;
+    transition: opacity 0.3s 0.0s, top 0.0s 0.0s;
+}
+
+.page-header .hamburger {
+    border: 0;
+    background: 0;
+    position: absolute;
+    right: 30px;
+    top: 35px;
+    color: #000000;
+}
+
+.page-header .hamburger .clear-icon {
+    display: none;
+}
+
+.page-header.nav-opened .hamburger .clear-icon {
+    display: block;
+    color: #000000;
+}
+
+.page-header.nav-opened .hamburger .menu-icon {
+    display: none;
+}
 /*
  * ROTATOR
  */
@@ -49,7 +119,7 @@ h1 {
 }
 
 .rotator button {
-    z-index: 100;
+    z-index: 1;
     background: none;
     border: none;
     position: absolute;
