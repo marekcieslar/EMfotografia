@@ -14,21 +14,23 @@ btnLeft.classList.add('left');
 
 // DATA
 let photos = [];
+// ending photo
 photos.push({
     title: 'Reportarz z chrztu',
-    img: 'http://fotem.bolkokol.linuxpl.eu/wp-content/themes/emfotografia/img/front-rotator-chrzest.jpg'
+    img: 'http://emfotografia.eu/wp-content/themes/emfotografia/img/front-rotator-chrzest.jpg'
 });
+// opening photo
 photos.push({
     title: 'Sesje rodzinne',
-    img: 'http://fotem.bolkokol.linuxpl.eu/wp-content/themes/emfotografia/img/front-rotator-dzieci.jpg'
+    img: 'http://emfotografia.eu/wp-content/themes/emfotografia/img/front-rotator-dzieci.jpg'
 });
 photos.push({
     title: 'Fotografia krajobrazu',
-    img: 'http://fotem.bolkokol.linuxpl.eu/wp-content/themes/emfotografia/img/front-rotator-krajobraz.jpg'
+    img: 'http://emfotografia.eu/wp-content/themes/emfotografia/img/front-rotator-krajobraz.jpg'
 });
 photos.push({
     title: 'Fotografia ślubna',
-    img: 'http://fotem.bolkokol.linuxpl.eu/wp-content/themes/emfotografia/img/front-rotator-slubne.jpg'
+    img: 'http://emfotografia.eu/wp-content/themes/emfotografia/img/front-rotator-slubne.jpg'
 });
 
 let elements = [];
@@ -92,6 +94,11 @@ btnRight.addEventListener('click', () => {
     refreshIntervalId = setInterval(moveRight, intervalTime);
 });
 
+btnStop = document.getElementById('btn-stop');
+btnStop.addEventListener('click', () => {
+    clearInterval(refreshIntervalId);
+});
+
 // WORKING TIME :)
 
 // to create and set elements
@@ -118,16 +125,16 @@ const addMenuClick = () => {
  * remove menu clicks when screen is big
  */
 
-const removeMenuClick = () => {
-    hamburger.removeEventListener('click', menuClick);
-    for (let i = 0; i < menuItems.length; i++) {
-        menuItems[i].removeEventListener('click', menuClick);
-    }
-}
+// const removeMenuClick = () => {
+//     hamburger.removeEventListener('click', menuClick);
+//     for (let i = 0; i < menuItems.length; i++) {
+//         menuItems[i].removeEventListener('click', menuClick);
+//     }
+// }
 
-if (document.body.clientWidth < 640) {
-    addMenuClick();
-}
+// if (document.body.clientWidth < 640) {
+     addMenuClick();
+// }
 
 /*
  * need only when screen is changing width
@@ -155,9 +162,4 @@ const changeLogoColor = color => {
 
 function menuClick() {
     toggleClass(header, 'nav-opened');
-//    if (header.classList.contains('nav-opened')) {
-//        changeLogoColor('#000000');
-//    } else {
-//        changeLogoColor('#FFFFFF');
-//    }
 }

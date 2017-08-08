@@ -9,7 +9,7 @@
 </head>
 <body>
 <header class="page-header" id="page-header">
-    <div class="container"> 
+    <div class="menu-container"> 
         <a href="<?php echo esc_url( home_url( '/') ); ?>" title="EMfotografia strona główna, main page"><object class="header-logo" data="<?php echo get_template_directory_uri(); ?>/logo/logoEM-web.svg" type="image/svg+xml"></object></a>
         <nav>
             <?php
