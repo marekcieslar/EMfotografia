@@ -12,27 +12,6 @@ btnLeft.innerHTML = '&lt;';
 rotator.appendChild(btnLeft);
 btnLeft.classList.add('left');
 
-// DATA
-let photos = [];
-// ending photo
-photos.push({
-    title: 'Reportarz z chrztu',
-    img: 'http://emfotografia.eu/wp-content/themes/emfotografia/img/front-rotator-chrzest.jpg'
-});
-// opening photo
-photos.push({
-    title: 'Sesje rodzinne',
-    img: 'http://emfotografia.eu/wp-content/themes/emfotografia/img/front-rotator-dzieci.jpg'
-});
-photos.push({
-    title: 'Fotografia krajobrazu',
-    img: 'http://emfotografia.eu/wp-content/themes/emfotografia/img/front-rotator-krajobraz.jpg'
-});
-photos.push({
-    title: 'Fotografia ślubna',
-    img: 'http://emfotografia.eu/wp-content/themes/emfotografia/img/front-rotator-slubne.jpg'
-});
-
 let elements = [];
 
 // FUNCTIONS
@@ -79,7 +58,6 @@ const moveLeft = () => {
 
 // EVENT LISTENERS
 
-let intervalTime = 4500;
 let refreshIntervalId = setInterval(moveRight, intervalTime);
 
 btnLeft.addEventListener('click', () => {
@@ -92,11 +70,6 @@ btnRight.addEventListener('click', () => {
     moveRight();
     clearInterval(refreshIntervalId);
     refreshIntervalId = setInterval(moveRight, intervalTime);
-});
-
-btnStop = document.getElementById('btn-stop');
-btnStop.addEventListener('click', () => {
-    clearInterval(refreshIntervalId);
 });
 
 // WORKING TIME :)
@@ -125,15 +98,15 @@ const addMenuClick = () => {
  * remove menu clicks when screen is big
  */
 
-// const removeMenuClick = () => {
-//     hamburger.removeEventListener('click', menuClick);
-//     for (let i = 0; i < menuItems.length; i++) {
-//         menuItems[i].removeEventListener('click', menuClick);
-//     }
-// }
+const removeMenuClick = () => {
+    hamburger.removeEventListener('click', menuClick);
+    for (let i = 0; i < menuItems.length; i++) {
+        menuItems[i].removeEventListener('click', menuClick);
+    }
+}
 
 // if (document.body.clientWidth < 640) {
-     addMenuClick();
+    addMenuClick();
 // }
 
 /*
@@ -142,9 +115,9 @@ const addMenuClick = () => {
 
 window.addEventListener('resize', e => {
     if (e.currentTarget.innerWidth > 639) {
-        removeMenuClick();
+//         removeMenuClick();
     } else {
-        addMenuClick();
+//         addMenuClick();
     }
 });
 
@@ -162,4 +135,9 @@ const changeLogoColor = color => {
 
 function menuClick() {
     toggleClass(header, 'nav-opened');
+    if (header.classList.contains('nav-opened')) {
+        changeLogoColor('#000000');
+    } else {
+        changeLogoColor('#FFFFFF');
+    }
 }

@@ -20,6 +20,12 @@ h4 {
     color: #999;
     font-family: 'Parisienne', cursive;
 }
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
 .container {
     max-width: 900px;
     padding: 25px;
@@ -137,6 +143,14 @@ h4 {
     overflow: hidden;
     padding-bottom: 45%;
     height: 0;
+    max-width: 1000px;
+}
+
+@media screen and (min-width: 1000px) {
+    .rotator {
+        padding-bottom: 450px;
+        margin: auto;
+    }
 }
 
 .rotator button {
