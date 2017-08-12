@@ -204,3 +204,34 @@ a {
     left: 100%;
     display: block;
 }
+
+
+/*
+ * Page Gallery
+ */
+
+.gallery-container {}
+
+.gallery-container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.gallery-container .gallery-thumb img {
+    width: calc(50% - 10px);
+    height: auto;
+    margin: 5px;
+    box-sizing: border-box;
+    border: 2px solid silver;
+    border-radius: 5px;
+    float: left;
+}
+
+/*
+ * lightbox
+ */
+
+.slb_container {
+    max-width: 95%;
+}
