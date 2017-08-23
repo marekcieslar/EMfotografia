@@ -302,4 +302,22 @@ a {
     .article-gallery .image .info h3 {
         padding-top: 35%;
     }
+    /*
+ * Page Gallery
+ */
+    .gallery-container {}
+    .gallery-container::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .gallery-container .gallery-thumb img {
+        width: calc(25% - 10px);
+        height: auto;
+        margin: 5px;
+        box-sizing: border-box;
+        border: 2px solid silver;
+        border-radius: 5px;
+        float: left;
+    }
 }
