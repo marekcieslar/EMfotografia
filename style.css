@@ -6,7 +6,10 @@
  * Version: 1.0
  * */
 
+/*
 @import url('https://fonts.googleapis.com/css?family=Parisienne|Roboto:300i');
+*/
+@import url('https://fonts.googleapis.com/css?family=Marck+Script|Roboto:300i');
 body {
     padding: 0;
     margin: 0;
@@ -18,7 +21,7 @@ h2,
 h3,
 h4 {
     color: #999;
-    font-family: 'Parisienne', cursive;
+    font-family: 'Marck Script', cursive;
 }
 
 a {
