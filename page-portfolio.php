@@ -6,7 +6,6 @@
     </header>
 
     </section>
-    <button id='btn-stop'>STOP</button>
 
     <section id='content'>
         <div class="container">
