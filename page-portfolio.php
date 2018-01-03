@@ -12,7 +12,6 @@
         <div class="container">
 
         <div class="article-gallery">
-            <h2>this is PORTFOLIO!!!!</h2>
             <a href="<?php echo get_theme_mod('emfotografia_portfolio_1_link', '#'); ?>">
                 <div class="image" style="background-image: url(<?php echo get_theme_mod('emfotografia_portfolio_1_img'); ?>);">
                     <div class="info">

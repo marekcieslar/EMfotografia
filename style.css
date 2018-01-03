@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css?family=Parisienne|Roboto:300i');
 */
 @import url('https://fonts.googleapis.com/css?family=Marck+Script|Roboto:300i');
+
 body {
     padding: 0;
     margin: 0;
@@ -22,6 +23,11 @@ h3,
 h4 {
     color: #999;
     font-family: 'Marck Script', cursive;
+}
+
+.alignleft {
+    float: left;
+	padding: 0 10px;
 }
 
 a {
