@@ -8,6 +8,7 @@
     <section id='rotator' class="rotator">
 
     </section>
+    <button id='btn-stop'>STOP</button>
 
     <section id='content'>
         <div class="container">
